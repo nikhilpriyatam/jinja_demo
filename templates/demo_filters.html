@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--A minimalist example which demonstrates the usage of Filters-->
+<html lang="en">
+<head>
+    <title>Jinja Filters Demo</title>
+</head>
+<body>
+	<h1>List of Builtin Filters</h1>
+	<p>The below list demonstrates all the built in filters.</p>
+	<h2>Builtin Filters operating on Integers, floats</h2>
+	<ul>
+		<li>Input: {{ num }}</li>
+		<li>Absolute: {{ num|abs }}</li>
+		<li>Float: {{ num|float }}</li>
+		<li>Integer: {{ num|int }}</li>
+		<li>Round: {{ num|round }}</li>
+		<li>String: {{ num|string }}</li>
+		<li>File Size Human readable format: {{ num|abs|int|filesizeformat }}</li>
+	</ul>
+	<h2>Builtin Filters operating on strings</h2>
+	<ul>
+	    <li>Input: {{ name }}</li>
+		<li>Lower: {{ name|lower }}</li>
+		<li>Upper: {{ name|upper }}</li>
+		<li>Title: {{ name|title }}</li>
+		<li>Length: {{ name|length }}</li>
+		<li>Wordcount: {{ name|wordcount }}</li>
+		<li>Capitalize: {{ name|capitalize }}</li>
+		<li>Replace: {{ name|replace('Pattisapu', 'Priyatam')}}</li>
+		<li>Reverse: {{ name|reverse }}</li>
+		<li>Escape: {{ name|escape }}</li>
+		<li>Trim: {{ name|trim }}</li>
+		<li>Center: {{ name|center(width=100) }}</li>
+		<li>Indent: {{ name|indent }}</li>
+		<li>Format: {{ "My name is %s "|format(name) }}</li>
+		<li>Truncate: {{ name|truncate(length=6, killwords=True)}}</li>
+		<li>Wordwrap: {{ name|wordwrap(width=3)}}</li>
+		<li>List: {{ name|list }}</li>
+		<li>Pretty print: {{ name|pprint }}</li>
+		<li>Default values for undefined var: {{ var|default('I am Undefined') }}</li>
+    </ul>
+	<h2>Builtin Filters operating on sequences</h2>
+	<ul>
+	    <li>Input: {{ mlist }}</li>
+		<li>Max: {{ mlist|max }}</li>
+		<li>Min: {{ mlist|min }}</li>
+		<li>Sum: {{ mlist|sum }}</li>
+		<li>First: {{ mlist|first }}</li>
+		<li>Last: {{ mlist|last }}</li>
+		<li>Length: {{ mlist|length }}</li>
+		<li>Reverse: {{ mlist|reverse|list }}</li>
+		<li>Join: {{ mlist|join('|') }}</li>
+		<li>Random elem: {{ mlist|random }}</li>
+		<li>Sorted list: {{ mlist|sort }}</li>
+		<li>Unique values: {{ mlist|unique|list }}</li>
+		<li>Map: {{ mlist|map('float')|sum }}</li>
+		<li>Reject: {{ mlist|reject('odd')|list }}</li>
+		<li>Select: {{ mlist|select('odd')|list }}</li>
+		<li>Slicing: {{ mlist|slice(2)|list }}</li>
+	    <li>Select attribute: {{ mlist2|selectattr('k1')|list }}</li>
+	    <li>Reject attribute: {{ mlist2|rejectattr('k1')|list }}</li>
+		<li>Batch: 
+			{% for tb in mlist|batch(2) %}
+			{{ tb }} and 
+			{% endfor %}
+		</li>
+	</ul>
+	<h2>Builtin Filters operating on dictionaries</h2>
+	<ul>
+	    <li>Input: {{ mdict }}</li>
+	    <li>Sorted dict: {{ mdict|dictsort }}</li>
+	    <li>To JSON: {{ mdict|tojson }}</li>
+	    <li>Xmlattr: {{ mdict|xmlattr }}</li>
+	</ul>
+</body>
+</html>

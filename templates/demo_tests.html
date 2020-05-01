@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--A minimalist example which demonstrates the usage of Filters-->
+<html lang="en">
+<head>
+    <title>Jinja Tests Demo</title>
+</head>
+<body>
+	<h1>List of Builtin Tests</h1>
+	<p>A minimalist example which demonstrates the usage of filters. The below list demonstrates all the built in tests.</p>
+	<h2>Builtin Filters operating on boolean</h2>
+	<ul>
+	    <li>Input: {{ mbool }}</li>
+		<li>{{ "Variable is boolean" if mbool is boolean }}</li>
+		<li>{{ "Value is false" if mbool is false }}</li>
+		<li>{{ "Value is not true" if mbool is not true }}</li>
+	</ul>
+	<h2>Builtin tests operating on Integers, floats</h2>
+	<ul>
+		<li>{{ "Var defined" if var is defined else "Var is not defined" }}</li>
+		<li>{{ "%s is not divisible by 3"|format(num) if num is not divisibleby(3) }}</li>
+		<li>{{ "%s is not even"|format(num) if num is not even }}</li>
+		<li>{{ "%s is not odd"|format(num|abs|int) if num|abs|int is not odd }}</li>
+		<li>{{ "%s is equal to %s"|format(num, num) if num is eq(num) }}</li>
+		<li>{{ "%s is greater than or equal to 0"|format(num|abs) if num|abs is ge(0) }}</li>
+		<li>{{ "%s is greater than 0"|format(num|abs) if num|abs is gt(0) }}</li>
+		<li>{{ "%s is less than or equal to 1000"|format(num) if num is le(1000) }}</li>
+		<li>{{ "%s is less than 1000"|format(num) if num is lt(1000) }}</li>
+		<li>{{ "%s is not equal to 0"|format(num) if num is ne(0) }}</li>
+		<li>{{ "%s is not an int"|format(num) if num is not integer }}</li>
+		<li>{{ "%s is a float"|format(num) if num is float }}</li>
+		<li>{{ "%s is a number"|format(num) if num is number }}</li>
+	</ul>
+	<h2>Builtin tests operating on strings</h2>
+	<ul>
+	    <li>Input: {{ name }}</li>
+		<li>{{ "%s is not lowercased"|format(name) if name is not lower }}</li>
+		<li>{{ "%s is not uppercased"|format(name) if name is not upper }}</li>
+		<li>{{ "%s is defined"|format(name) if name is defined}}</li>
+	</ul>
+	<h2>Builtin tests operating on sequences</h2>
+	<ul>
+	    <li>Input: {{ mlist }}</li>
+		<li>{{ "3 is present in %s"|format(mlist) if 3 in mlist}}</li>
+		<li>{{ "%s is iterable"|format(mlist) if mlist is iterable}}</li>
+		<li>{{ "%s is a sequence"|format(mlist) if mlist is sequence}}</li>
+	</ul>
+	<h2>Builtin tests operating on dictionaries</h2>
+	<ul>
+	    <li>Input: {{ mdict }}</li>
+		<li>{{ "%s is a mapping"|format(mdict) if mdict is mapping}}</li>
+		<li>{{ "%s is same as False"|format(mdict.k1) if mdict.k1 is sameas False}}</li>
+	</ul>
+	<h2>Builtin tests operating on functions</h2>
+	<ul>
+	    <li>Input: {{ mfunc }}</li>
+		<li>{{ "%s is a function"|format(mfunc) if mfunc is callable}}</li>
+	</ul>
+</body>
+</html>

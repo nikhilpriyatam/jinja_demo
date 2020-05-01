@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--A minimalist example which demonstrates the usage of Filters-->
+<html lang="en">
+<head>
+    <title>Jinja Filters Demo</title>
+</head>
+<body>
+	<h1>List of Builtin Filters</h1>
+	<p>The below list demonstrates all the built in filters.</p>
+	<h2>Builtin Filters operating on Integers, floats</h2>
+	<ul>
+		<li>Input: -76.3</li>
+		<li>Absolute: 76.3</li>
+		<li>Float: -76.3</li>
+		<li>Integer: -76</li>
+		<li>Round: -76.0</li>
+		<li>String: -76.3</li>
+		<li>File Size Human readable format: 76 Bytes</li>
+	</ul>
+	<h2>Builtin Filters operating on strings</h2>
+	<ul>
+	    <li>Input: nikhil Pattisapu </li>
+		<li>Lower: nikhil pattisapu </li>
+		<li>Upper: NIKHIL PATTISAPU </li>
+		<li>Title: Nikhil Pattisapu </li>
+		<li>Length: 17</li>
+		<li>Wordcount: 2</li>
+		<li>Capitalize: Nikhil pattisapu </li>
+		<li>Replace: nikhil Priyatam </li>
+		<li>Reverse:  upasittaP lihkin</li>
+		<li>Escape: nikhil Pattisapu </li>
+		<li>Trim: nikhil Pattisapu</li>
+		<li>Center:                                          nikhil Pattisapu                                           </li>
+		<li>Indent: nikhil Pattisapu </li>
+		<li>Format: My name is nikhil Pattisapu  </li>
+		<li>Truncate: nik...</li>
+		<li>Wordwrap: nik
+hil
+Pat
+tis
+apu</li>
+		<li>List: ['n', 'i', 'k', 'h', 'i', 'l', ' ', 'P', 'a', 't', 't', 'i', 's', 'a', 'p', 'u', ' ']</li>
+		<li>Pretty print: 'nikhil Pattisapu '</li>
+		<li>Default values for undefined var: I am Undefined</li>
+    </ul>
+	<h2>Builtin Filters operating on sequences</h2>
+	<ul>
+	    <li>Input: [3, 2, 4, 3]</li>
+		<li>Max: 4</li>
+		<li>Min: 2</li>
+		<li>Sum: 12</li>
+		<li>First: 3</li>
+		<li>Last: 3</li>
+		<li>Length: 4</li>
+		<li>Reverse: [3, 4, 2, 3]</li>
+		<li>Join: 3|2|4|3</li>
+		<li>Random elem: 4</li>
+		<li>Sorted list: [2, 3, 3, 4]</li>
+		<li>Unique values: [3, 2, 4]</li>
+		<li>Map: 12.0</li>
+		<li>Reject: [2, 4]</li>
+		<li>Select: [3, 3]</li>
+		<li>Slicing: [[3, 2], [4, 3]]</li>
+	    <li>Select attribute: [{'k1': True, 'k2': 30}]</li>
+	    <li>Reject attribute: [{'k1': False, 'k2': 20}]</li>
+		<li>Batch: 
+			
+			[3, 2] and 
+			
+			[4, 3] and 
+			
+		</li>
+	</ul>
+	<h2>Builtin Filters operating on dictionaries</h2>
+	<ul>
+	    <li>Input: {'k1': 40, 'k2': 50}</li>
+	    <li>Sorted dict: [('k1', 40), ('k2', 50)]</li>
+	    <li>To JSON: {"k1": 40, "k2": 50}</li>
+	    <li>Xmlattr:  k1="40" k2="50"</li>
+	</ul>
+</body>
+</html>

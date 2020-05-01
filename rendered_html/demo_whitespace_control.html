@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--A minimalist example which demonstrates the whitespace vcontrol in Jinja through code and through template -->
+<html lang="en">
+<head>
+    <title>Jinja Whitespace control Demo</title>
+</head>
+<body>
+	<h1>lstrip_blocks and trim_blocks to False</h1>
+    <ul>
+	<li>In this example the env.lstrip_blocks and env.trim_blocks variables are set to False</li>
+	<li>This is sample text before the beginning of the block</li>
+	
+
+		<div>
+			<li>Setting lstrip_blocks to False ensures that the additional space to the left (before the first letter) is left as-is.</li>
+			<li>Setting trim_blocks to False ensures that the additional before starting of the block are left as-is.</li>
+		</div>
+
+	
+	<li>This is sample text after the ending of the block</li>
+    </ul>
+
+	<h1>Setting lstrip_blocks and trim_block to True using Template</h1>
+    <ul>
+	<li>In this example the env.lstrip_blocks and env.trim_blocks variables are set to False</li>
+	<li>The - symbol in the if block below strips whitespaces before and after the if statement</li>
+	<li>The + symbol (if placed) in the if block will preserve the whitespaces before and after the if statement</li>
+	<li>This is sample text before the beginning of the block</li><div>
+			<li>Setting lstrip_blocks to False ensures that the additional space to the left (before the first letter) is left as-is.</li>
+			<li>Setting trim_blocks to False ensures that the additional before starting of the block are left as-is.</li>
+		</div><li>This is sample text after the ending of the block</li>
+	<li><b>You might not see a difference between the two in the rendered HTML. Check the actual HTML</b></li>
+    </ul>
+</body>
+</html>
